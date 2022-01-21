@@ -1,5 +1,6 @@
 const submit = document.getElementById ("submit");
 const BauCua = document.getElementById ("BauCua");
+const Audio = document.getElementById ("audio");
 
 const IMG = document.querySelectorAll ("img");
 
@@ -7,13 +8,15 @@ console.log (IMG);
 
 const XiNgau = ["Nai.png","Bau.png","Ga.png","Ca.png","Cua.png","Tom.png"];
 
-var Count = 10;
+var Count = 35;
 
 var CanSub = true;
 
 submit.addEventListener ("click", () => {
 	if (CanSub) {
 		CanSub = false;
+		Audio.load ();
+		Audio.play ();
 		IMG.forEach(function(userItem) {
 			userItem.classList.add ("shake");
 		});
@@ -33,7 +36,8 @@ function RandomBauCua () {
 	}
 
 	else {
-		Count = 10;
+		Count = 35;
+		Audio.pause ();
 		IMG.forEach(function(userItem) {
 			userItem.classList.remove ("shake");
 		});
