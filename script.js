@@ -104,7 +104,7 @@ ChooseBC.forEach ((item,index) => {
 			let coordT = Math.floor(Math.random () * (ChooseBC[0].offsetWidth - 55));
 			let coordL = Math.floor(Math.random () * (ChooseBC[0].offsetWidth - 55));
 			Balance-= ChipNow;
-			item.insertAdjacentHTML ("beforeend","<img class='chipBet' style='--randomIndexT:"+coordT+"px; --randomIndexL:"+coordL+"px;' src='Chips/chip"+ChipNow+".png'>")
+			item.insertAdjacentHTML ("beforeend","<img class='chipBet' style='--randomIndexT:"+coordT+"px; --randomIndexL:"+coordL+"px;' src='Chips/Chip"+ChipNow+".png'>")
 			ValueBC[index] += ChipNow;
 			$("#BetNowBC"+index).textContent = NameBC[index]+": "+ConvertMoney (ValueBC[index])+"$";
 			ChangeBalance ();
