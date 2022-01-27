@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	user-select: none;
+	outline: none;
 }
 
 body {
@@ -53,7 +54,6 @@ header p {
 	0 0 10px yellow;
 	font-weight: bold;
 	color: white;
-	outline: none;
 }
 
 #close_detailBet {
@@ -68,7 +68,6 @@ header p {
 	0 0 15px red;
 	font-weight: bold;
 	color: white;
-	outline: none;
 }
 
 #BauCua {
@@ -177,8 +176,6 @@ header p {
 	padding: 10px 20px;
 	font-weight: bold;
 	cursor: pointer;
-	outline: none;
-
 }
 
 
