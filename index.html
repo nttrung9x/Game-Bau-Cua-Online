@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 	<title>Game Bầu Cua</title>
 	<meta charset="utf-8" />
@@ -27,33 +27,33 @@
 	</div>
 	<div id="SanDau">
 		<div class="ChooseBC">
-			<img id="NaiID" class="BauCuaChoose" src="BauCua/Nai.png" />
+			<img alt="Chọn Nai" id="NaiID" class="BauCuaChoose" src="BauCua/Nai.png" />
 		</div>
 		<div class="ChooseBC">
-			<img id="BauID" class="BauCuaChoose" src="BauCua/Bau.png" />
+			<img alt="Chọn Bầu" id="BauID" class="BauCuaChoose" src="BauCua/Bau.png" />
 		</div>
 		<div class="ChooseBC">
-			<img id="GaID" class="BauCuaChoose" src="BauCua/Ga.png" />
+			<img alt="Chọn Gà" id="GaID" class="BauCuaChoose" src="BauCua/Ga.png" />
 		</div>
 		<div class="ChooseBC">
-			<img id="CaID" class="BauCuaChoose" src="BauCua/Ca.png" />
+			<img alt="Chọn Cá" id="CaID" class="BauCuaChoose" src="BauCua/Ca.png" />
 		</div>
 		<div class="ChooseBC">
-			<img id="CuaID" class="BauCuaChoose" src="BauCua/Cua.png" />
+			<img alt="Chọn Cua" id="CuaID" class="BauCuaChoose" src="BauCua/Cua.png" />
 		</div>
 		<div class="ChooseBC">
-			<img id="TomID" class="BauCuaChoose" src="BauCua/Tom.png" />
+			<img alt="Chọn Tôm" id="TomID" class="BauCuaChoose" src="BauCua/Tom.png" />
 		</div>
 	</div>
 	<div id="PlateLidPlace" style="display: none">
 		<div id="PlateLid">
-			<img src="plate.png"></img>
-			<img id="first" class="LacBC" style="--indexT: 1; --indexL: 2" src="BauCua/Cua.png"/>
-			<img id="second" class="LacBC" style="--indexT: 2.6; --indexL: 1" src="BauCua/Cua.png"/>
-			<img id="third" class="LacBC" style="--indexT: 2.6; --indexL: 3" src="BauCua/Cua.png"/>
-			<img id="LidIn" src="lid.png" style="display: none"/>
+			<img alt="Đĩa" src="plate.png" />
+			<img alt="Viên thứ 1" id="first" class="LacBC" style="--indexT: 1; --indexL: 2" src="BauCua/Cua.png"/>
+			<img alt="Viên thứ 2" id="second" class="LacBC" style="--indexT: 2.6; --indexL: 1" src="BauCua/Cua.png"/>
+			<img alt="Viên thứ 3" id="third" class="LacBC" style="--indexT: 2.6; --indexL: 3" src="BauCua/Cua.png"/>
+			<img alt="Nắp Đĩa" id="LidIn" src="lid.png" style="display: none"/>
 		</div>
-		<img id="Lid" src="lid.png"/>
+		<img alt="Nắp Đĩa" id="Lid" src="lid.png"/>
 		<button id="closeShake">ĐÓNG</button>
 	</div>
 	<div id="ShowBet" style="display: none;">
@@ -68,19 +68,19 @@
 	</div>
 	<button id="submit">LẮC</button>
 	<div id="Money">
-		<img class="ChipsCoin ChipsActive" id="Chips1"  src="Chips/Chip1.png">
-		<img class="ChipsCoin" id="Chips5"  src="Chips/Chip5.png">
-		<img class="ChipsCoin" id="Chips10" src="Chips/Chip10.png">
-		<img class="ChipsCoin" id="Chips20" src="Chips/Chip20.png">
-		<img class="ChipsCoin" id="Chips50" src="Chips/Chip50.png">
-		<img class="ChipsCoin" id="Chips100" src="Chips/Chip100.png">
-		<img class="ChipsCoin" id="Chips500" src="Chips/Chip500.png">
-		<img class="ChipsCoin" id="Chips1000" src="Chips/Chip1000.png">
+		<img alt="Chip 1$" class="ChipsCoin ChipsActive" id="Chips1"  src="Chips/Chip1.png">
+		<img alt="Chip 5$" class="ChipsCoin" id="Chips5"  src="Chips/Chip5.png">
+		<img alt="Chip 10$" class="ChipsCoin" id="Chips10" src="Chips/Chip10.png">
+		<img alt="Chip 20$" class="ChipsCoin" id="Chips20" src="Chips/Chip20.png">
+		<img alt="Chip 50$" class="ChipsCoin" id="Chips50" src="Chips/Chip50.png">
+		<img alt="Chip 100$" class="ChipsCoin" id="Chips100" src="Chips/Chip100.png">
+		<img alt="Chip 500$" class="ChipsCoin" id="Chips500" src="Chips/Chip500.png">
+		<img alt="Chip 1000$" class="ChipsCoin" id="Chips1000" src="Chips/Chip1000.png">
 	</div>
 	<audio id="audio" style="display: none" controls="" loop>
 		<source src="shake.mp3" type="audio/mpeg">
 	</audio>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
