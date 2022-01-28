@@ -21,7 +21,6 @@ header {
 	width: 100vw;
 	height: 200px;
 	position: relative;
-	padding: 50px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -42,8 +41,8 @@ header p {
 	text-align: center;
 }
 
-#detailBet {
-	margin-top: 10px;
+.detailBet {
+	margin: 10px 10px 0;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
@@ -54,6 +53,51 @@ header p {
 	0 0 10px yellow;
 	font-weight: bold;
 	color: white;
+}
+
+.resetMoney {
+	margin: 10px 10px 0;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	background-color: gold;
+	box-shadow: 0 0 5px orange,
+	0 0 10px yellow;
+	font-weight: bold;
+	color: red;	
+}
+
+#FunctionBTN {
+	display: flex;
+}
+
+#FunctionBTN_mb {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.8);
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+}
+
+#closeFN_mb {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: 36px;
+	background-color: red;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	border: 2px solid orange;
+	box-shadow: 0 0 10px yellow;
 }
 
 #close_detailBet {
@@ -256,16 +300,6 @@ header p {
 	background-color: rgba(220,20,60,0.8);
 }
 
-@media only screen and (max-width: 600px) {
-	h1 {
-		font-size: 2rem;
-	}
-
-	#BauCua {
-		width: 95vw;
-	}
-}
-
 .ChipsActive {
 	background-color: rgba(220,20,60,0.8);
 }
@@ -299,4 +333,35 @@ header p {
 	color: white;
 	text-align: center;
 	text-shadow: 0 0 10px red;
+}
+
+#more {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-size: 35px;
+	cursor: pointer;
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	#BauCua {
+		width: 95vw;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#FunctionBTN {
+		display: none;
+	}
+	#more {
+		display: initial;
+	}
 }
