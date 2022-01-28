@@ -31,8 +31,6 @@ var ResultBet = ["Cua","Cua","Cua"];
 
 var ChipNow = PriceChip[0];
 
-var Count = 35;
-
 var CanSub = true;
 
 function setCookie(cname, cvalue, exdays=365) {
