@@ -16,9 +16,10 @@ const LidIn = $("#LidIn");
 const closeShake = $("#closeShake");
 const balanceText = $("#balanceText");
 const ShowBet = $("#ShowBet");
+const more = $("#more");
 
 
-var Balance = 500000000;
+var Balance = 500000;
 
 const XiNgau = ["Nai.png","Bau.png","Ga.png","Ca.png","Cua.png","Tom.png"];
 const PriceChip = [1,5,10,20,50,100,500,1000];
@@ -33,6 +34,38 @@ var ChipNow = PriceChip[0];
 var Count = 35;
 
 var CanSub = true;
+
+function setCookie(cname, cvalue, exdays=365) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let money = getCookie("money");
+  if (user != "") {
+    ChangeBalance (parseInt(money));
+  }
+}
+
+checkCookie ();
 
 submit.addEventListener ("click", () => {
 	if (CanSub) {
@@ -52,6 +85,14 @@ submit.addEventListener ("click", () => {
 		},1000);
 		
 	}
+});
+
+$("#closeFN_mb").onclick = function () {
+	$("#FunctionBTN_mb").style.display = "none";
+};
+
+more.addEventListener ("click", () => {
+	$("#FunctionBTN_mb").style.display = "flex";
 });
 
 closeShake.addEventListener ("click", () => {
@@ -85,7 +126,9 @@ function RandomBauCua () {
 			if (ResultBet.includes(NameBC[i]))
 				Balance+=ValueBC[i];
 			ValueBC[i] = 0;
+			$("#BetNowBC"+i).textContent = NameBC[i]+": "+ConvertMoney (ValueBC[i])+"$";
 		}
+
 		ChangeBalance ();
 	},1500);
 }
@@ -121,6 +164,7 @@ ChooseBC.forEach ((item,index) => {
 
 function ChangeBalance () {
 	balanceText.textContent = "Tài sản: "+ConvertMoney (Balance)+"$";
+	setCookie ("money",Balance);
 }
 
 function ConvertMoney (money) {
@@ -141,4 +185,14 @@ function OpenDetail() {
 
 function CloseDetail() {
 	ShowBet.style.display = "none";
+}
+
+function ResetMoney() {
+	Balance = 500000;
+	ChangeBalance();
+	Swal.fire(
+		'Phục Hồi Thành Công',
+		'Tài sản của bạn đã phục hồi về mức ban đầu...',
+		'success'
+	)
 }
