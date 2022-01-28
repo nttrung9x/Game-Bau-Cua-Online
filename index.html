@@ -13,10 +13,18 @@
 <body>
 	<header>
 		<h1>Bầu Cua Cá Cọp</h1>
-		<p id="balanceText">Tài sản: 500.000.000$</p>
-		<button id="detailBet" onclick="OpenDetail()">Xem Chi Tiết Cược</button>
+		<p id="balanceText">Tài sản: 500.000$</p>
+		<div id="FunctionBTN">
+			<button class="detailBet" onclick="OpenDetail()">Xem Chi Tiết Cược</button>
+			<button class="resetMoney" onclick="ResetMoney()">Phục Hồi Tài Sản</button>
+		</div>
 	</header>
-	
+	<button id="more" class="material-icons-outlined">reorder</button>
+	<div id="FunctionBTN_mb">
+		<button id="closeFN_mb" class="material-icons-outlined">close</button>
+		<button class="detailBet" style="width: 90vw" onclick="OpenDetail()">Xem Chi Tiết Cược</button>
+		<button class="resetMoney" style="width: 90vw" onclick="ResetMoney()">Phục Hồi Tài Sản</button>
+	</div>
 	<div id="SanDau">
 		<div class="ChooseBC">
 			<img id="NaiID" class="BauCuaChoose" src="BauCua/Nai.png" />
