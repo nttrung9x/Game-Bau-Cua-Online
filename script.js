@@ -80,7 +80,7 @@ submit.addEventListener ("click", () => {
 			RandomBauCua ();
 			LidIn.style.display = "initial";
 			Lid.style.display = "none";
-		},1000);
+		},1155);
 
 		
 	}
@@ -105,14 +105,14 @@ closeShake.addEventListener ("click", () => {
 });
 
 function RandomBauCua () {
+	IMG.forEach(function(userItem,index) {
+		let indexRD = Math.floor (Math.random () * 6);
+		userItem.src = "BauCua/"+XiNgau[indexRD];
+		ResultBet[index] = NameBC[indexRD];
+	});
 	setTimeout (() => {
 		PlateLid.classList.remove ("shake");
 		Audio.pause ();
-		IMG.forEach(function(userItem,index) {
-			let indexRD = Math.floor (Math.random () * 6);
-			userItem.src = "BauCua/"+XiNgau[indexRD];
-			ResultBet[index] = NameBC[indexRD];
-		});
 		LidIn.style.display = "none";
 		Lid.style.display = "initial";
 		Lid.style.animationDirection = "reverse";
