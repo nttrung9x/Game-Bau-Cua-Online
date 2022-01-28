@@ -60,6 +60,7 @@ function checkCookie() {
   let money = getCookie("money");
   if (money != "") {
     Balance = parseInt(money);
+    ChangeBalance ();
   };
 };
 
