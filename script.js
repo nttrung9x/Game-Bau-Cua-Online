@@ -59,12 +59,10 @@ function getCookie(cname) {
 function checkCookie() {
   let money = getCookie("money");
   if (money != "") {
-    ChangeBalance (parseInt(money));
+    Balance = parseInt(money);
   };
-  console.log (money);
 };
 
-console.log (document.cookie);
 checkCookie ();
 
 submit.addEventListener ("click", () => {
