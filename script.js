@@ -60,9 +60,11 @@ function checkCookie() {
   let money = getCookie("money");
   if (money != "") {
     ChangeBalance (parseInt(money));
-  }
-}
+  };
+  console.log (money);
+};
 
+console.log (document.cookie);
 checkCookie ();
 
 submit.addEventListener ("click", () => {
@@ -81,6 +83,7 @@ submit.addEventListener ("click", () => {
 			LidIn.style.display = "initial";
 			Lid.style.display = "none";
 		},1000);
+
 		
 	}
 });
